@@ -2,10 +2,13 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h2>Upload Students CSV</h2>
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input class="btn btn-primary" type="submit" value="Submit">
-</form>
+<div class="card p-5 m-5 text-center">
+    <h2 class="text-center">Upload Students CSV</h2>
+    <br><br>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>
 {% endblock %}

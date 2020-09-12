@@ -25,11 +25,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'students-list'  %}">View Students</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'upload-students-csv' %}">Upload Students CSV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'upload-attendance-csv'  %}">Upload Attendance CSV</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Upload CSV
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'upload-students-csv' %}">Upload Students CSV</a>
+                            <a class="dropdown-item" href="{% url 'upload-attendance-csv'  %}">Upload Attendance CSV</a>
+                        </div>
                     </li>
                     {% endif %}
                     {% if user.is_authenticated %}

@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from accounts.views import IndexView
+from uploads.views import UploadStudentsCSVView, UploadAttendanceCSVView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', IndexView.as_view(), name='home'),
+    path('upload-students-csv/', UploadStudentsCSVView.as_view(), name='upload-students-csv'),
+    path('upload-attendance-csv/', UploadAttendanceCSVView.as_view(), name='upload-attendance-csv'),
+    # path('create-student-accounts/', create_student_accounts, name='create-student-accounts'),
+    # path('update-student-attendance/',update_student_attendance,name='update-student-attendance')
 ]

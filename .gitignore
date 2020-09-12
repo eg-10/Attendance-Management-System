@@ -113,3 +113,6 @@ myvenv
 
 # Editor files
 .vscode/
+
+# Media
+*.csv

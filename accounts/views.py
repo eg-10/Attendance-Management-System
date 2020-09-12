@@ -13,14 +13,6 @@ from uploads.forms import CSVUploadForm
 from accounts.models import Student
 
 
-# class RegisterTeacherView(TemplateView):
-#     template_name = ''
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context["user_form"] = UserCreationForm()
-#         context["teacher_form"] = 
-
 class IndexView(LoginRequiredMixin, TemplateView):
     template_name = 'accounts/index.html'
 

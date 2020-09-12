@@ -52,7 +52,7 @@ class UploadStudentsCSVView(FormView):
             try:
                 s = Student.objects.get(uid=str(d['uid']))
             except:
-                u = User.objects.create(
+                u = User.objects.create_user(
                     username=str(d['uid']),
                     password='SPIT@'+str(d['uid']),
                     email=d['email'],

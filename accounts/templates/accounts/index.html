@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Welcome</h2>
+<div class="text-center">
+    {% if user.student and user.student.attendance %}
+    <h2>Welcome, {{ user.first_name }}</h2><br>
+    <h4>Your attendance is {{user.student.attendance}}%.</h4>
+    {% else %}
+    <h2>Welcome, {{ user.username }}</h2><br>
+    <h4>Students registered: {{ students_count }}</h4>
+    {% endif %}
+</div>
 {% endblock %}
